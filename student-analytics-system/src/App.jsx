@@ -13,6 +13,7 @@ import AdminStudentInsights from "./pages/AdminStudentInsights";
 import AdminAttendance from "./pages/AdminAttendance";
 import StudentManagement from "./pages/StudentManagement";
 import StudentAttendamce from "./pages/StudentAttendance";
+import EditStudent from "./pages/EditStudent";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -35,6 +36,7 @@ function App() {
         <Route path="/admin-reports" element={<Reports role="admin" />} />
         <Route path="/admin-insights" element={<AdminStudentInsights />} />
         <Route path="/student-attendance" element={<StudentAttendamce />} />
+        <Route path="/edit-student/:roll" element={<EditStudent />} />
         <Route path="/student-reports" element={<StudentReports role="student" />} />
       </Routes>
     </Router>

@@ -188,19 +188,22 @@ function StudentManagement() {
               </DialogContent>
 
               <DialogActions>
-                <Button
-                  color="error"
+               <Button
                   onClick={() =>
-                    handleDelete(selectedStudent.roll)
+                  navigate(`/edit-student/${selectedStudent.roll}`, {
+                  state: selectedStudent,
+                  })
                   }
-                >
-                  Delete
+                  variant="contained"
+                  >
+                  Edit
                 </Button>
 
-                <Button
-                  onClick={() => setSelectedStudent(null)}
-                >
-                  Close
+               <Button
+                  color="error"
+                  onClick={() => handleDelete(selectedStudent.roll)}
+                  >
+                  Delete
                 </Button>
               </DialogActions>
             </>
